@@ -1,0 +1,123 @@
+/* COLORS */
+:root {
+    --backside-blue-border: #003A70
+}
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Asap', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1d1d1d;
+}
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 50px;
+    color: #ffcb05;
+    font-size: 10rem;
+    text-align: center;
+}
+.card-container {
+    position: relative;
+    height: 880px;
+    width: 630px;
+}
+.card-container:hover {
+    transform: scale(1.05);
+    transition: 200ms;
+    cursor: pointer;
+}
+.turn-backside{
+    transform: rotateY(90deg);
+    transition: 400ms;
+    z-index: 999;
+}
+.backside-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/IMG/pokemon_card_backside_in_high_resolution_by_atomicmonkeytcg_dah43cy-fullview.png);
+    background-size: cover;
+}
+.pokemon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border: var(--backside-blue-border) solid 10px;
+    background-color: #ffcb05;
+    transform: rotateY(90deg);
+    transition-delay: 500ms;
+    transition-duration: 500ms;
+}
+.slide {
+    transform: translatex(10000px);
+}
+.turn-frontside {
+    transform: rotateY(0deg);
+    transition-delay: 500ms;
+    transition-duration: 500ms;
+}
+.name-and-hp {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+.pokemon-name{
+    margin-left: 120px;
+    font-size: 4rem;
+    font-weight: 600;
+}
+.pokemon-hp {
+    margin-right: 50px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+#hp {
+    font-size: 4rem;
+}
+.pokemon-img {
+    width: 550px;
+    height: 380px;
+    object-fit: contain;
+    border: 10px solid;
+    
+}
+#type {
+    text-align: center;
+    font-size: 3rem;
+    margin: 10px;
+}
+.ability-container {
+    width: 550px;
+    height: 380px;
+    margin: 40px;
+    padding: 10px;
+    border: #c7a008 solid 10px;
+    background-color: #2a75bb;
+}
+.ability-container p{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.ability-container div {
+    display: flex;
+    justify-content: space-between;
+}
